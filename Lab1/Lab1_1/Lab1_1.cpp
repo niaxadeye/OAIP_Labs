@@ -1,7 +1,7 @@
 ﻿#include <stdio.h>                                 
 #include <math.h>     
 #include <locale.h>   
-float alg(double x, double y, double  z) {
+double alg(double x, double y, double  z) {
     double ans;
     ans = (pow(3, x) - pow((y-2),2)) / (z + 3);
     return (ans);
