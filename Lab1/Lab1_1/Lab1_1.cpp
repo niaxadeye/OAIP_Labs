@@ -1,27 +1,27 @@
 ﻿#include <stdio.h>                                 
 #include <math.h>     
 #include <locale.h>   
-double alg(double x, double y, double  z) {
-    double ans;
-    ans = (pow(3, x) - pow((y-2),2)) / (z + 3);
-    return (ans);
+double alg(double x, double y, double  z) { // Объявление функции для подсёча значения исходного выражения
+    double ans; // Объявляем вовращемую функцией перменную 
+    ans = (x*x*x- (y-2)*(y-2)) / (z + 3)*2; // вычисляем исходное выражение 
+    return (ans); // Возвращаем вычисленное выражение
 
 }
 int main() {
-    setlocale(LC_ALL, "Rus");
-    double ans, x , y, z;
-    printf_s("Выражение (3^x - (y-2)^2) / (z + 3): \n");
+    setlocale(LC_ALL, "Rus");// Локализация
+    double ans, x , y, z; // Объявляем переменные
+    printf_s("Выражение (x^3 - (y-2)^2) / ((z + 3)*2): \n"); // Выводим выражение
     printf_s("Введите переменную x: ");
-    scanf_s("%lf", &x);
+    scanf_s("%lf", &x); // Считыввем переменную x
     printf_s("Введите переменную y: ");
-    scanf_s("%lf", &y);
+    scanf_s("%lf", &y); // Считыввем переменную y
     printf_s("Введите переменную z: ");
-    scanf_s("%lf", &z);
+    scanf_s("%lf", &z); // Считыввем переменную z
     if (z == -3) {
         printf_s("z не может равняться -3, т.к. деление на 0 недопустимо");
         return 0;
     }
-    ans = alg(x, y, z);
-    printf("%lf", ans);
+    ans = alg(x, y, z);  // Вызывем функцию alg, которая возвращает значение исходного выражения, при введённых переменных 
+    printf("%lf", ans); 
     return 0;
 }
