@@ -11,7 +11,7 @@ int main()
     int arr[10] = { 3, 75, 17, 55, 41, 84, 96, 92, 99, 87 };
 
     for (i = 0; i < n - 1; i++) {
-        for (j = 0; j < n  - 1; j++) {
+        for (j = 0; j < n  - 1 - i; j++) {
             if (arr[j + 1] < arr[j]) {
                 temp = arr[j + 1];
                 arr[j + 1] = arr[j];
@@ -19,7 +19,7 @@ int main()
             }
         }
     }
-    printf_s("Сортировка с помощью циклов for ");
+    printf_s("Сортировка с помощью циклов for: ");
     for (i = 0; i < n ; i++) {
     printf_s("%i ", arr[i]);
     }
@@ -28,7 +28,7 @@ int main()
     j = 0;
     while (i < n - 1) {
         j = 0;
-        while (j < n - 1 ) {
+        while (j < n - 1 - i ) {
             if (arr_2[j + 1] < arr_2[j]) {
                 temp = arr_2[j + 1];
                 arr_2[j + 1] = arr_2[j];
